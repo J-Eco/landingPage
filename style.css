@@ -1,0 +1,136 @@
+:root {
+    --navFootColor: #1F2937;
+    --hero-Text: 48px;
+    --hero-Text-Color: #F9FAF8;
+    --secondary-hero-text: 18px;
+    --nav-text-color: #E5E7EB;
+    --button-color: #3882F6;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 100vw;
+    height: 80px;
+    background-color: var(--navFootColor);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--hero-Text-Color);
+}
+
+.navLinks .navText {
+    list-style: none;
+}
+.navText a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    padding: 25px 10px;
+    transition: ease-in background-color 90ms;
+}
+
+.navText a:hover {
+    background-color: #2d3d53;
+}
+
+.navLinks {
+    display: flex;
+    font-size: var(--secondary-hero-text);
+}
+
+
+
+
+.hero {
+    background-color: var(--navFootColor);
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    padding: 16px;
+}
+.heroText {
+    color: var(--hero-Text-Color);
+    max-width: 900px;
+    font-size: var(--secondary-hero-text);
+}
+.heroText > * {
+    margin-bottom: 25px;
+}
+.heroText h2 {
+    font-size: var(--hero-Text);
+}
+
+.heroImg {
+    max-width: 800px;
+    min-width: 360px;
+}
+
+
+
+
+.button {
+    background-color: var(--button-color);
+    border: none;
+    color: var(--hero-Text-Color);
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #4d8df5;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+}
+.col4 {
+    /* height: 39vh; */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.col4Header {
+    font-size: 36px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 30px 0;
+}
+.block {
+    width: 250px;
+    height: 250px;
+    border: 2px var(--button-color) solid;
+    border-radius: 20px;
+}
+
+
+
+@media screen and (max-width: 1175px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+    .heroImg {
+        max-width: 680px;
+    }
+    .block {
+        flex: 1 1 auto;
+    }    
+}
