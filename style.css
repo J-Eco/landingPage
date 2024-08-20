@@ -173,7 +173,7 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    height: 16vh;
+    height: 22vh;
     width: 75vw;
     border-radius: 15px;
     padding: 15px;
@@ -202,7 +202,25 @@
     align-items: center;
 }
 
+
+.navbar .icon {
+    color: #E5E7EB;
+    font-size: 1.46rem;
+}
+
+a.icon {
+    display: none;
+    right: 0;
+    top: 0;
+    width: 20px;
+    position: relative;
+}
+
 @media screen and (max-width: 660px) {
+    .navbar {
+        padding: 0 20px;
+        justify-content: space-between;
+    }
     .hero {
         flex-direction: column;
         height: auto;
@@ -211,10 +229,48 @@
         max-width: 100%;
     }
     .full {
-        height: 25vh;
+        height: 39vh;
     }
     .contents {
-        height: 21vh;
+        height: 30vh;
         width: 90vw;
+    }
+
+    a.icon {
+        display: block;
+    }
+    .navbar .navLinks {
+        display: none;
+        width: 100%;
+        animation-name: slideIn;
+        animation-duration: .3s;
+    }
+    .navLinks {
+        height: 100vh;
+        top: 70px;
+        right: 0;
+        position: fixed;
+        background-color: #212429;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.25rem;
+    }
+    .navText a {
+        padding: 20px 100vw;
+    }
+    .navLinks .navText {
+        margin-top: 30px;
+    }
+
+    @keyframes slideIn {
+        0% {left: 100%;}
+        100% {left: 0;}
+        
+    }
+
+    @keyframes slideOut {
+        0% {left: 0;}
+        100% {left: 100%;}
+        
     }
 }
